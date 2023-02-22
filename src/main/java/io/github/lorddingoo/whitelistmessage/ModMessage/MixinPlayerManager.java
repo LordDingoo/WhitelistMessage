@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class MixinPlayerManager {
     @Redirect(method = "checkCanJoin", at = @At(value = "INVOKE", target = "Lnet/minecraft/text/Text;translatable(Ljava/lang/String;)Lnet/minecraft/text/MutableText;", ordinal = 0))
     public MutableText mod$redirectWhitelistText(String key) {
-        return Text.literal("Hello there, you aren't whitelisted yet - join the discord server and make sure to type in your username https://discord.gg/EPWF5A6v2K");
+        return Text.literal("§cHello there, you aren't whitelisted yet - join the discord server and make sure to type in your username https://discord.gg/EPWF5A6v2K");
     }
 }
