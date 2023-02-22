@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "whitelistmessage",
+  "version": "${version}",
+  "name": "Whitelistmessage",
+  "description": "Mod to change the message players see if they aren't whitelisted on the server",
+  "authors": [
+    "LordDingoo"
+  ],
+  "contact": {
+    "repo": "https://github.com/LordDingoo/WhitelistMessage-1.19.2.git"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/whitelistmessage/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "client": [
+      "io.github.lorddingoo.whitelistmessage.client.WhitelistMessageClient"
+    ],
+    "main": [
+      "io.github.lorddingoo.whitelistmessage.WhitelistMessage"
+    ]
+  },
+  "mixins": [
+    "whitelistmessage.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.15",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
